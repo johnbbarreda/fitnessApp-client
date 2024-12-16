@@ -1,0 +1,95 @@
+Create a React.js app.
+Use the ff api as the server: https://fitnessapp-api-ln8u.onrender.com/
+    # Fitness App API - Documentation
+    ## Resources
+    - App Base Url
+        - https://fitnessapp-api-ln8u.onrender.com
+    - Admin User
+        - No Admin
+    ## References
+    ## Endpoints
+    ### Users
+    #### [POST] - "/users/login"
+    - Sample Request Body
+        ```json
+
+        {
+            "email": "sample@mail.com",
+            "password": "samplePw123"
+        }
+
+        ```
+    #### [POST] - "/users/register"
+    - Sample Request Body
+        ```json
+
+        {
+            "email": "sample@mail.com",
+            "password": "samplePw123"
+        }
+
+        ```
+    #### [GET] - "/users/details"
+    - Requires token
+    - No Request Body    
+    ### Workouts
+    #### [POST] - "/workouts/addWorkout"
+    - Sample Request Body
+
+        ```json
+
+        {
+            "name": "Sample Workout",
+            "duration": "30 mins",
+        }
+
+        ```
+
+    #### [GET] - "/workouts/getMyWorkouts"
+    - Requires Token
+    - No Request Body
+    #### [PATCH] - "/workouts/updateWorkout/:id"
+    - Requires Token
+    - Sample Request Body
+        ```json
+
+        {
+            "name": "Sample Workout",
+            "duration": "30 mins",
+        }
+
+        ```
+    #### [DELETE] - "/workouts/deleteWorkout/:id"
+    - Requires Token
+    - No Request Body
+    #### [POST] - "/workouts/completeWorkoutStatus/:id"
+    - Requires Token
+    - No Request Body
+
+
+For the frontend:
+{
+    "url": "",
+    "endpoints": {
+        "register": "/register",
+        "login": "/login",
+        "workouts": "/workouts"
+    }
+}
+Create a simple fitness tracker full stack app:
+integrate the fitness tracking application where users can login their workouts and track their progress over time
+A user should be able to add and retrieve workouts
+    users can only access their own workout documents
+each workout should include name, duration, dateAdded, and status
+Each workout should be in a card
+A user should be able to register and login
+a user should be able to check all the workouts but only their own
+page endpoints:
+home - /
+register - /register
+login - /login
+workouts - /workouts
+add workout - /addworkout
+add edit and delete buttons with functionalities to each workout card
+
+i use react-bootstrap bootstrap react-router-dom notyf. do not use axios. 
